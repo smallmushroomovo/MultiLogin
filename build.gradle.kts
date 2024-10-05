@@ -69,16 +69,6 @@ subprojects {
     java.sourceCompatibility = rootProject.java.sourceCompatibility
     java.targetCompatibility = rootProject.java.targetCompatibility
 
-
-    dependencies {
-        compileOnly(fileTree(mapOf("dir" to rootDir.resolve("libraries"), "include" to listOf("*.jar"))))
-
-        "com.velocitypowered:velocity-api:3.3.0-SNAPSHOT".apply {
-            annotationProcessor(this)
-            compileOnly(this)
-        }
-    }
-
     tasks.shadowJar {
 //        configurations = listOf()
 
