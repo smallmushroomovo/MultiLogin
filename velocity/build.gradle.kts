@@ -1,3 +1,7 @@
+repositories {
+    maven { url = uri("https://repo.papermc.io/repository/maven-public/") }
+}
+
 dependencies {
     implementation(project(":multilogin-api"))
 

@@ -15,7 +15,7 @@ import moe.caa.multilogin.api.player.MultiLoginPlayer
  */
 class PlayerLoginSourceRequestEvent(
     val player: MultiLoginPlayer
-): IEvent {
+) {
     private var source: LoginSource? = null
 
     /**

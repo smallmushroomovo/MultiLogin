@@ -1,9 +1,7 @@
 package moe.caa.multilogin.api
 
-import moe.caa.multilogin.api.manager.OnlineDataProvider
-import moe.caa.multilogin.api.manager.ProfileManager
-import moe.caa.multilogin.api.manager.ServiceManager
-import moe.caa.multilogin.api.manager.UserManager
+import moe.caa.multilogin.api.eventbus.EventBus
+import moe.caa.multilogin.api.manager.*
 
 interface MultiLoginAPI {
     /**
@@ -24,5 +22,10 @@ interface MultiLoginAPI {
     /**
      * 角色信息提供者
      */
-    val onlineDataProvider: OnlineDataProvider
+    val loginSourceDataManager: LoginSourceDataManager
+
+    /**
+     * 事件车
+     */
+    val eventBus: EventBus
 }
