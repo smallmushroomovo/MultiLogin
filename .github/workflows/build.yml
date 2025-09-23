@@ -64,5 +64,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Artifact
-          path: bukkit/build/libs/MultiLogin-Bukkit-${{ env.version }}.jar
+          path: ./bukkit/build/libs/MultiLogin*.jar
 
