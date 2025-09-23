@@ -45,7 +45,7 @@ jobs:
         if: env.release == 'false'
         uses: gradle/gradle-build-action@v2
         with:
-          gradle-version: current
+          gradle-version: 8.2
           arguments: ShadowJar
 
       - name: Build Release
