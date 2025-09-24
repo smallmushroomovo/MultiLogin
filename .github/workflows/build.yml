@@ -59,15 +59,8 @@ jobs:
         run: |
           rm -f ~/.gradle/caches/modules-2/modules-2.lock
           rm -f ~/.gradle/caches/modules-2/gc.properties
-
-      - name: Publish Release
-        if: env.release == 'true'
-        uses: marvinpinto/action-automatic-releases@latest
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "v${{ env.version }}"
-          draft: false
-          prerelease: false
-          title: "MultiLogin v${{ env.version }}"
-          files: |
-            velocity/build/libs/MultiLogin-Velocity-${{ env.version }}.jar
+          name: Artifact
+          path: ./velocity/build/libs/MultiLogin*.jar
